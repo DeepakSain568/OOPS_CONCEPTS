@@ -2,6 +2,7 @@
 using namespace std;
 
 class student{
+    public:
 int Age;
 char *name;
 
@@ -11,7 +12,7 @@ student(int Age,char*name){
     this->name=name;
 }
 void display(){
-    cout<<Age<<" "<<*name<<"\n";
+    cout<<Age<<" "<<name<<"\n";
 }
 };
 
@@ -23,4 +24,7 @@ int main(){
      student s2(24,name);
     s2.display();
     s1.display();
+    student s3(s2);
+    s3.display();
+    s2.display();
 }
